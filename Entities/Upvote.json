@@ -1,0 +1,18 @@
+{
+    "name": "Upvote",
+    "type": "object",
+    "properties": {
+      "complaint_id": {
+        "type": "string",
+        "description": "ID of the complaint being upvoted"
+      },
+      "user_email": {
+        "type": "string",
+        "description": "Email of user who upvoted"
+      }
+    },
+    "required": [
+      "complaint_id",
+      "user_email"
+    ]
+  }

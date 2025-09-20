@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network API Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 20px; }
+        .test { margin: 10px 0; padding: 10px; border: 1px solid #ddd; }
+        .success { background-color: #d4edda; border-color: #c3e6cb; }
+        .error { background-color: #f8d7da; border-color: #f5c6cb; }
+        button { padding: 10px 20px; margin: 5px; }
+        pre { background: #f5f5f5; padding: 10px; overflow-x: auto; }
+    </style>
+</head>
+<body>
+    <h1>SahiSamasya Network API Test</h1>
+    <p>Current URL: <span id="currentUrl"></span></p>
+    <p>API Base URL: <span id="apiUrl"></span></p>
+    
+    <button onclick="testHealthCheck()">Test Health Check</button>
+    <button onclick="testComplaintsList()">Test Complaints List</button>
+    <button onclick="testUpvotesList()">Test Upvotes List</button>
+    
+    <div id="results"></div>
+
+    <script>
+        const currentUrl = window.location.href;
+        const hostname = window.location.hostname;
+        const apiBaseUrl = hostname === 'localhost' || hostname === '127.0.0.1' 
+            ? 'http://localhost:3001/api' 
+            : `http://${hostname}:3001/api`;
+        
+        document.getElementById('currentUrl').textContent = currentUrl;
+        document.getElementById('apiUrl').textContent = apiBaseUrl;
+        
+        function addResult(title, success, data) {
+            const div = document.createElement('div');
+            div.className = `test ${success ? 'success' : 'error'}`;
+            div.innerHTML = `
+                <h3>${title}</h3>
+                <pre>${JSON.stringify(data, null, 2)}</pre>
+            `;
+            document.getElementById('results').appendChild(div);
+        }
+        
+        async function testHealthCheck() {
+            try {
+                const response = await fetch(`${apiBaseUrl.replace('/api', '')}/health`);
+                const data = await response.json();
+                addResult('Health Check', response.ok, data);
+            } catch (error) {
+                addResult('Health Check', false, { error: error.message });
+            }
+        }
+        
+        async function testComplaintsList() {
+            try {
+                const response = await fetch(`${apiBaseUrl}/complaints`);
+                const data = await response.json();
+                addResult('Complaints List', response.ok, data);
+            } catch (error) {
+                addResult('Complaints List', false, { error: error.message });
+            }
+        }
+        
+        async function testUpvotesList() {
+            try {
+                const response = await fetch(`${apiBaseUrl}/upvotes`);
+                const data = await response.json();
+                addResult('Upvotes List', response.ok, data);
+            } catch (error) {
+                addResult('Upvotes List', false, { error: error.message });
+            }
+        }
+        
+        // Auto-run health check on load
+        window.onload = () => {
+            testHealthCheck();
+        };
+    </script>
+</body>
+</html>

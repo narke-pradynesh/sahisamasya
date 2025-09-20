@@ -1,0 +1,98 @@
+{
+    "name": "Complaint",
+    "type": "object",
+    "properties": {
+      "title": {
+        "type": "string",
+        "description": "Brief title of the complaint"
+      },
+      "description": {
+        "type": "string",
+        "description": "Detailed description of the issue"
+      },
+      "photo_url": {
+        "type": "string",
+        "description": "URL of uploaded photo"
+      },
+      "latitude": {
+        "type": "number",
+        "description": "GPS latitude coordinate"
+      },
+      "longitude": {
+        "type": "number",
+        "description": "GPS longitude coordinate"
+      },
+      "address": {
+        "type": "string",
+        "description": "Human readable address"
+      },
+      "category": {
+        "type": "string",
+        "enum": [
+          "road_maintenance",
+          "streetlights",
+          "waste_management",
+          "water_supply",
+          "drainage",
+          "parks",
+          "traffic",
+          "noise_pollution",
+          "other"
+        ],
+        "description": "Auto-classified category of the complaint"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "pending",
+          "escalated",
+          "in_progress",
+          "completed",
+          "rejected"
+        ],
+        "default": "pending",
+        "description": "Current status of the complaint"
+      },
+      "priority": {
+        "type": "string",
+        "enum": [
+          "low",
+          "medium",
+          "high",
+          "urgent"
+        ],
+        "default": "medium",
+        "description": "Priority level based on upvotes and severity"
+      },
+      "upvote_count": {
+        "type": "number",
+        "default": 0,
+        "description": "Number of upvotes received"
+      },
+      "escalation_threshold": {
+        "type": "number",
+        "default": 5,
+        "description": "Upvotes needed for escalation"
+      },
+      "assigned_to": {
+        "type": "string",
+        "description": "Department or staff member assigned"
+      },
+      "resolution_notes": {
+        "type": "string",
+        "description": "Notes from admin when resolving"
+      },
+      "estimated_completion": {
+        "type": "string",
+        "format": "date",
+        "description": "Estimated completion date"
+      }
+    },
+    "required": [
+      "title",
+      "description",
+      "photo_url",
+      "latitude",
+      "longitude"
+    ]
+  }
