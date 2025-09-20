@@ -1,4 +1,4 @@
-# SahiSamasya Setup Guide
+# SahiSamasya Citizen Interface Setup Guide
 
 ## 🚀 Quick Start
 
