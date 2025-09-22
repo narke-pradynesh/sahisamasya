@@ -1,6 +1,6 @@
 # SahiSamasya Citizen Interface Setup Guide
 
-## 🚀 Quick Start
+##  Quick Start
 
 1. **Install dependencies:**
    ```bash
@@ -19,7 +19,7 @@
    seedDemoData();
    ```
 
-## 🔐 Authentication Features
+##  Authentication Features
 
 ### **User Registration**
 - Full name, email, and password validation
@@ -52,7 +52,7 @@
 - Error handling for failed image loads
 - Responsive design
 
-## 🏗️ Architecture
+##  Architecture
 
 ### **Authentication System**
 - Local storage-based session management
@@ -72,7 +72,7 @@
 - Error handling and retry logic
 - User-specific API key management
 
-## 🧪 Testing
+##  Testing
 
 ### **Test Authentication**
 1. Click "Create Account" to register
@@ -91,7 +91,7 @@ import { testApiIntegration } from './src/utils/apiTest.js';
 testApiIntegration();
 ```
 
-## 🔧 Configuration
+##  Configuration
 
 ### **Environment Variables**
 Create a `.env` file in the root directory with the following variables:
@@ -136,30 +136,30 @@ If an image doesn't match any category, it returns `null` for manual classificat
 - Allowed types: image/*
 - Configure in `src/integrations/Core.js`
 
-## 📱 Features
+##  Features
 
 ### **User Management**
-- ✅ User registration with email
-- ✅ User login with email/password
-- ✅ Session persistence
-- ✅ Secure logout
-- ✅ Role-based access (admin/citizen)
+- User registration with email
+- User login with email/password
+- Session persistence
+- Secure logout
+- Role-based access (admin/citizen)
 
 ### **Photo Upload**
-- ✅ File validation
-- ✅ Size limits
-- ✅ Real-time preview
-- ✅ Error handling
-- ✅ Hover controls
-- ✅ AI classification with OpenRouter API
+-  File validation
+-  Size limits
+-  Real-time preview
+-  Error handling
+-  Hover controls
+-  AI classification with OpenRouter API
 
 ### **API Integration**
-- ✅ Base44 API endpoints
-- ✅ Error handling
-- ✅ Fallback data
-- ✅ User-specific keys
+-  Base44 API endpoints
+-  Error handling
+-  Fallback data
+-  User-specific keys
 
-## 🎯 Next Steps
+##  Next Steps
 
 1. **Deploy to production**
 2. **Integrate real cloud storage** for photos
@@ -168,7 +168,7 @@ If an image doesn't match any category, it returns `null` for manual classificat
 5. **Add password reset functionality**
 6. **Integrate with real authentication provider**
 
-## 🐛 Troubleshooting
+##  Troubleshooting
 
 ### **Login Issues**
 - Check browser console for errors

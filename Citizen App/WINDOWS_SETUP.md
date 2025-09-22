@@ -1,6 +1,6 @@
 # Windows 11 Setup Guide for SahiSamasya
 
-## 🪟 Windows-Specific Setup
+##  Windows-Specific Setup
 
 Since Windows 11 doesn't support `&&` in command chaining, we've created Windows-compatible scripts.
 
@@ -95,26 +95,26 @@ sahisamasya-mobile/
 └── ...
 ```
 
-## 🚀 Features Fixed
+##  Features Fixed
 
-### ✅ Upvote System
+###  Upvote System
 - Fixed 500 error when deleting upvotes
 - Added detailed logging for debugging
 - Improved error handling and validation
 
-### ✅ File Upload System
+###  File Upload System
 - Real server-side file upload (not just data URLs)
 - Proper file storage in `uploads/` directory
 - Fallback to data URL if server upload fails
 - File serving endpoint for uploaded images
 
-### ✅ Windows Compatibility
+###  Windows Compatibility
 - Cross-platform scripts using `concurrently`
 - Windows-specific setup scripts
 - PowerShell and batch file options
 - No more `&&` command chaining issues
 
-## 🔍 Testing the Fixes
+##  Testing the Fixes
 
 1. **Test Upvote Deletion:**
    - Login to the app
@@ -133,7 +133,7 @@ sahisamasya-mobile/
    - Verify all dependencies are installed
    - Start the app with `npm run dev:full`
 
-## 📞 Support
+##  Support
 
 If you encounter any issues:
 1. Check the server console for error messages

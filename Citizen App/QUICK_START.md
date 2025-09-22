@@ -1,17 +1,17 @@
-# 🚀 Quick Start Guide - MongoDB Integration
+# Quick Start Guide - MongoDB Integration
 
-## ✅ **MongoDB Integration is Working!**
+##  **MongoDB Integration is Working!**
 
 Your SahiSamasya platform is now successfully connected to MongoDB. Here's how to test it:
 
-## 🔧 **Current Status**
-- ✅ **Backend Server**: Running on `http://localhost:3001`
-- ✅ **MongoDB**: Connected to your Atlas cluster
-- ✅ **Database**: `SahiSamasya` with 2 users, 1 complaint, 1 upvote
-- ✅ **Authentication**: JWT-based login system
-- ✅ **API Endpoints**: All working correctly
+##  **Current Status**
+-  **Backend Server**: Running on `http://localhost:3001`
+-  **MongoDB**: Connected to your Atlas cluster
+-  **Database**: `SahiSamasya` with 2 users, 1 complaint, 1 upvote
+-  **Authentication**: JWT-based login system
+-  **API Endpoints**: All working correctly
 
-## 🧪 **How to Test**
+##  **How to Test**
 
 ### **1. Start the Application**
 ```bash
@@ -48,30 +48,30 @@ npm run dev
 ### **5. Test Upvoting**
 1. Go back to the Home page
 2. Find your complaint
-3. Click the upvote button (👍)
+3. Click the upvote button
 4. The upvote count should increase
 
-## 🔍 **What's Fixed**
+##  **What's Fixed**
 
 ### **Authentication Issues**
-- ✅ **Login/Register**: Now works with MongoDB backend
-- ✅ **Token Management**: JWT tokens stored and validated
-- ✅ **Protected Routes**: ReportIssue page requires authentication
-- ✅ **User State**: Properly managed across the app
+-  **Login/Register**: Now works with MongoDB backend
+-  **Token Management**: JWT tokens stored and validated
+-  **Protected Routes**: ReportIssue page requires authentication
+-  **User State**: Properly managed across the app
 
 ### **API Integration**
-- ✅ **User Entity**: Connected to MongoDB
-- ✅ **Complaint Entity**: Connected to MongoDB  
-- ✅ **Upvote Entity**: Connected to MongoDB
-- ✅ **Error Handling**: Graceful fallbacks to demo data
+-  **User Entity**: Connected to MongoDB
+-  **Complaint Entity**: Connected to MongoDB  
+-  **Upvote Entity**: Connected to MongoDB
+-  **Error Handling**: Graceful fallbacks to demo data
 
 ### **Data Flow**
-- ✅ **Registration**: Creates user in MongoDB
-- ✅ **Login**: Validates credentials and returns JWT
-- ✅ **Complaints**: Stored in MongoDB with user references
-- ✅ **Upvotes**: Stored in MongoDB with relationships
+-  **Registration**: Creates user in MongoDB
+-  **Login**: Validates credentials and returns JWT
+-  **Complaints**: Stored in MongoDB with user references
+-  **Upvotes**: Stored in MongoDB with relationships
 
-## 🐛 **Troubleshooting**
+##  **Troubleshooting**
 
 ### **If you get 401 errors:**
 1. Make sure the backend server is running: `npm run server`
@@ -88,18 +88,18 @@ npm run dev
 2. Check if you've already upvoted the complaint
 3. Look for error messages in the console
 
-## 📊 **Database Status**
+##  **Database Status**
 - **Users**: 2 (including test user)
 - **Complaints**: 1 (test complaint)
 - **Upvotes**: 1 (test upvote)
 
-## 🎯 **Next Steps**
+##  **Next Steps**
 1. **Test the full flow**: Register → Login → Create Complaint → Upvote
 2. **Try different features**: Filter complaints, search, etc.
 3. **Test admin features**: If you create an admin user
 4. **Deploy to production**: When ready
 
-## 🔗 **Useful URLs**
+##  **Useful URLs**
 - **Frontend**: http://localhost:5173
 - **Backend API**: http://localhost:3001/api
 - **Health Check**: http://localhost:3001/health

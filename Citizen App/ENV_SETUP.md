@@ -46,7 +46,7 @@ This document explains how to configure environment variables for the SahiSamasy
 
 ## Security Notes
 
-⚠️ **Important Security Considerations:**
+**Important Security Considerations:**
 
 1. **Never commit `.env` files** to version control
 2. **Change the JWT_SECRET** in production
