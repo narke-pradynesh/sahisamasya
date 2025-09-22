@@ -180,7 +180,7 @@ console.log(upvote);
 ## 🔧 **Configuration**
 
 ### **MongoDB Connection**
-- **Connection String**: `mongodb+srv://admin:mzh8441@civic-platform.4xmfl4f.mongodb.net/`
+- **Connection String**: `mongodb+srv://admin:<password>@civic-platform.4xmfl4f.mongodb.net/`
 - **Database Name**: `SahiSamasya`
 - **Connection**: Configured in `server/config/database.js`
 
